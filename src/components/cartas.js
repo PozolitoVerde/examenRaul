@@ -16,16 +16,14 @@ const Cartas = () =>{
         'telefono': ''
     }
 
-    // useEffect(() =>{
-    //     btnActual.current.className = "display-none"
-    // }, [])
+   
 
     const btnActual = useRef(null)
 
     const [datos, setDatos] = useState(initialState)
     const {nombre, direccion, telefono, id} = datos
     const [informacion, setInformacion] = useState([])
-    //Variable de estado para que aparezca el botón de actualizar
+    
     const[isActive, setIsActive] = useState(false)
 
     const handleSubmit = event =>{
@@ -46,7 +44,7 @@ const Cartas = () =>{
         setDatos({
             ...datos, [e.target.name]:e.target.value 
         })
-        // console.log(datos)
+        
     }
     const handleModificar = e =>{
         const id = e.target.name.slice(1)
